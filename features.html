@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitur Yuks Inventory</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: #333;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007aff;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            font-size: 14px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #007aff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature img {
+            max-width: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007aff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Yuks Inventory</div>
+        <nav>
+            <ul>
+                <li><a href="customer.html">Customer</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="todo.html">To Do</a></li>
+                <li><a href="lainnya.html">Lainnya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Fitur Unggulan</h1>
+        <p>Yuks Inventory menyediakan berbagai fitur untuk memudahkan pengelolaan barang Anda. Berikut adalah beberapa fitur unggulan:</p>
+
+        <div class="features">
+            <div class="feature">
+                <img src="uploads/manajemenbarang.jpeg" alt="Manajemen Barang">
+                <h3>Manajemen Barang</h3>
+                <p>Kelola stok barang Anda dengan mudah dan real-time.</p>
+            </div>
+
+            <div class="feature">
+                <img src="uploads/laporankeuangan (1).jpeg" alt="Laporan Keuangan">
+                <h3>Laporan Keuangan</h3>
+                <p>Dapatkan laporan keuangan yang akurat dan terstruktur.</p>
+            </div>
+
+            <div class="feature">
+                <img src="uploads/pemberitahuanstok.jpg" alt="Pemberitahuan Stok">
+                <h3>Pemberitahuan Stok</h3>
+                <p>Notifikasi otomatis untuk stok barang yang hampir habis.</p>
+            </div>
+
+            <div class="feature">
+                <img src="uploads/integrasiAPI.jpeg" alt="Integrasi API">
+                <h3>Integrasi API</h3>
+                <p>Hubungkan sistem Anda dengan API kami untuk otomatisasi.</p>
+            </div>
+
+            <div class="feature">
+                <img src="uploads/keamanandata.jpg" alt="Keamanan Data">
+                <h3>Keamanan Data</h3>
+                <p>Data Anda terenkripsi dan aman dengan teknologi terkini.</p>
+            </div>
+
+            <div class="feature">
+                <img src="uploads/multidevice.jpeg" alt="Akses Multi-Perangkat">
+                <h3>Akses Multi-Perangkat</h3>
+                <p>Kelola inventori dari mana saja melalui perangkat Anda.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div class="btn-container">
+    <a href="dashboard.html" class="btn-back">Kembali ke Dashboard</a>
+</div>
+</div>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f8ffae, #43c6ac);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007aff;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #007aff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+
+        .task-input {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .task-input input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .task-input button {
+            padding: 0.5rem 1rem;
+            background-color: #007aff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .task-input button:hover {
+            background-color: #005ecc;
+        }
+
+        .tasks {
+            margin-top: 2rem;
+        }
+
+        .tasks ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tasks ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .tasks ul li:hover {
+            transform: scale(1.02);
+        }
+
+        .tasks ul li .task-name {
+            flex: 1;
+        }
+
+        .tasks ul li button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tasks ul li button:hover {
+            background-color: #cc0000;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007aff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Yuks Inventory</div>
+        <nav>
+            <ul>
+                <li><a href="customer.html">Customer</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="todo.html">To Do</a></li>
+                <li><a href="lainnya.html">Lainnya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="task-input">
+            <input type="text" id="task" placeholder="Tambah tugas baru...">
+            <button onclick="addTask()">Tambah</button>
+        </div>
+        <div class="tasks">
+            <ul id="task-list">
+                <!-- Daftar tugas akan muncul di sini -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function addTask() {
+            const taskInput = document.getElementById('task');
+            const taskList = document.getElementById('task-list');
+
+            if (taskInput.value.trim() === '') {
+                alert('Tugas tidak boleh kosong!');
+                return;
+            }
+
+            const li = document.createElement('li');
+            const taskName = document.createElement('span');
+            taskName.className = 'task-name';
+            taskName.textContent = taskInput.value;
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Hapus';
+            deleteButton.onclick = () => li.remove();
+
+            li.appendChild(taskName);
+            li.appendChild(deleteButton);
+            taskList.appendChild(li);
+
+            taskInput.value = '';
+        }
+    </script>
+</body>
+
+<div class="btn-container">
+    <a href="dashboard.html" class="btn-back">Kembali ke Dashboard</a>
+</div>
+</div>
+
+</html>

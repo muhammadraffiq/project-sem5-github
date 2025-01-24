@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+    background-size: 400% 400%;
+    background-position: center;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    background: rgba(255, 255, 255, 0.9); /* Memberikan efek transparan agar latar belakang tetap terlihat */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    background: rgba(255, 255, 255, 0.85); /* Transparansi sidebar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main .orders {
+    background: #ffffff; /* Kembali ke latar belakang putih untuk konten utama */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007aff;
+    letter-spacing: 2px;
+}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        header .search-bar {
+    max-width: 300px;
+}
+
+header .search-bar form {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem; /
+}
+
+header .search-bar input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px; 
+    font-size: 14px;
+}
+
+header .search-bar button {
+    padding: 0.5rem 1rem;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Membulatkan hanya bagian kanan */
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+header .search-bar button:hover {
+    background-color: #005ecc;
+}
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007aff;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            font-size: 14px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #007aff;
+        }
+
+        header .profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        header .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #007aff;
+            transition: transform 0.3s ease;
+        }
+
+        header .profile img:hover {
+            transform: scale(1.1);
+        }
+
+        .container {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        .sidebar .user-info {
+            text-align: center;
+            margin-bottom: 2rem;
+            background-color: #e0f7ff;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .sidebar .user-info .tier {
+            background-color: #d1e7fd;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #007aff;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 1rem;
+            font-size: 14px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 500;
+            padding: 0.5rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #007aff;
+            color: white;
+        }
+
+        .main {
+            width: 80%;
+        }
+
+        .main .orders {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .main .orders img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .main .orders h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .main .orders p {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .help {
+            text-align: center;
+        }
+
+        .help a {
+            text-decoration: none;
+            color: white;
+            background-color: #007aff;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .help a:hover {
+            background-color: #005ecc;
+        }
+
+        .help {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 24px;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 16px;
+    color: #333;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+        .logo {
+            font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto */
+            font-size: 32px;
+            font-weight: 500;
+            color: #007aff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .main .orders img {
+            max-width: 150%; /* Memastikan gambar responsif dan tidak lebih lebar dari container */
+            height: auto;    /* Menyesuaikan tinggi agar proporsional dengan lebar */
+            max-width: 300px; /* Mengatur lebar maksimal gambar */
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+        .logo:hover {
+            color: #005ecc; /* Mengubah warna saat hover */
+            transform: scale(1.1); /* Membesarkan logo saat hover */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Menambahkan efek bayangan */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Yuks Inventory</div>
+        <div class="search-bar">
+            <form action="search_results.php" method="GET">
+                <input type="text" name="query" placeholder="Cari sesuatu..." required>
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="customer.html">Customer</a></li> 
+                <li><a href="features.html">Features</a></li> 
+                <li><a href="todo.html">To Do</a></li> 
+                <li><a href="lainnya.html">Lainnya</a></li> 
+        </ul>
+    </nav>
+    <div class="profile">
+        <div>User</div>
+        <img src="uploads/profile.jpeg" alt="User Avatar">
+    </div>
+</header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="edit_user.html"><span>👤</span> Akun</a></li>
+                <li><a href="myorders.html"><span>📄</span> Purchase </a></li>
+                <li><a href="stockbarang.html"><span>📦</span> Stock Barang</a></li>
+                <li><a href="keuangan.html"><span>💳</span> Laporan Keuangan</a></li>
+                <li><a href="pricing.html"><span>❤️</span> Premium Plan</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="orders">
+                <h3>Daftar Barang yang Sudah Diterima</h3>
+                <table style="width:100%; border-collapse:collapse; text-align:left;">
+                    <thead>
+                        <tr style="background-color:#f0f0f0;">
+                            <th style="padding:10px; border:1px solid #ddd;">Nama Barang</th>
+                            <th style="padding:10px; border:1px solid #ddd;">Tanggal Pembelian</th>
+                            <th style="padding:10px; border:1px solid #ddd;">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:10px; border:1px solid #ddd;">Laptop ASUS ROG</td>
+                            <td style="padding:10px; border:1px solid #ddd;">15 Januari 2025</td>
+                            <td style="padding:10px; border:1px solid #ddd; color:green;">Sudah Diterima</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px; border:1px solid #ddd;">Headset JBL Quantum</td>
+                            <td style="padding:10px; border:1px solid #ddd;">10 Januari 2025</td>
+                            <td style="padding:10px; border:1px solid #ddd; color:green;">Sudah Diterima</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px; border:1px solid #ddd;">Smartphone iPhone 13</td>
+                            <td style="padding:10px; border:1px solid #ddd;">5 Januari 2025</td>
+                            <td style="padding:10px; border:1px solid #ddd; color:green;">Sudah Diterima</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="help">
+                <a href="#">Pusat Bantuan</a>
+            </div>
+        </div>
+        
+            
+        </div>
+    </div>
+</body>
+
+</html>

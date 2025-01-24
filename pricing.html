@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: #333;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007aff;
+            letter-spacing: 2px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        header .logo:hover {
+            color: #005ecc;
+            transform: scale(1.1);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            font-size: 14px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #007aff;
+        }
+
+        .container {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-header h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .pricing-header p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .pricing-plans {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .plan {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .plan:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .plan h2 {
+            font-size: 24px;
+            color: #007aff;
+            margin-bottom: 1rem;
+        }
+
+        .plan .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan ul li {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan button {
+            background-color: #007aff;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .plan button:hover {
+            background-color: #005ecc;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007aff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+        .pricing-header p {
+        font-size: 16px;
+        color: white; /* Mengubah warna teks menjadi putih */
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Yuks Inventory</div>
+        <nav>
+            <ul>
+                <li><a href="customer.html">Customer</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="todo.html">To Do</a></li>
+                <li><a href="lainnya.html">Lainnya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="pricing-header">
+            <h1>Pilih Paket yang Sesuai</h1>
+            <p>Optimalkan inventori Anda dengan paket terbaik dari Yuks Inventory.</p>
+        </div>
+
+        <div class="pricing-plans">
+            <!-- Plan Basic -->
+            <div class="plan">
+                <h2>Basic</h2>
+                <div class="price">Rp 100.000/bulan</div>
+                <ul>
+                    <li>Manajemen hingga 50 produk</li>
+                    <li>Dukungan pelanggan dasar</li>
+                    <li>Analitik dasar</li>
+                </ul>
+                <button>Pilih Paket</button>
+            </div>
+
+            <!-- Plan Standard -->
+            <div class="plan">
+                <h2>Standard</h2>
+                <div class="price">Rp 250.000/bulan</div>
+                <ul>
+                    <li>Manajemen hingga 500 produk</li>
+                    <li>Dukungan pelanggan prioritas</li>
+                    <li>Analitik lanjutan</li>
+                </ul>
+                <button>Pilih Paket</button>
+            </div>
+
+            <!-- Plan Premium -->
+            <div class="plan">
+                <h2>Premium</h2>
+                <div class="price">Rp 500.000/bulan</div>
+                <ul>
+                    <li>Manajemen tanpa batas</li>
+                    <li>Dukungan pelanggan 24/7</li>
+                    <li>Integrasi API</li>
+                </ul>
+                <button>Pilih Paket</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div class="btn-container">
+    <a href="dashboard.html" class="btn-back">Kembali ke Dashboard</a>
+</div>
+</div>
+
+</html>

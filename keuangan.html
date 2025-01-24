@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Keuangan</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+            background-size: 400% 400%;
+            background-position: center;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007aff;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #007aff;
+        }
+
+        .container {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 500;
+            padding: 0.5rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #007aff;
+            color: white;
+        }
+
+        .main {
+            width: 80%;
+        }
+
+        .main .report {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .main .report h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .main .report p {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .finance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .finance-table thead tr {
+            background-color: #007aff;
+            color: white;
+        }
+
+        .finance-table th, .finance-table td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+        }
+
+        .finance-table tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007aff;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Yuks Inventory</div>
+        <nav>
+            <ul>
+                <li><a href="customer.html">Customer</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="todo.html">To Do</a></li>
+                <li><a href="lainnya.html">Lainnya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="edit_user.html"><span>👤</span> Akun</a></li>
+                <li><a href="myorders.html"><span>📄</span> Purchase </a></li>
+                <li><a href="stockbarang.html"><span>📦</span> Stock Barang</a></li>
+                <li><a href="keuangan.html"><span>💳</span> Laporan Keuangan</a></li>
+                <li><a href="pricing.html"><span>❤️</span> Premium Plan</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="report">
+                <h3>Laporan Keuangan</h3>
+                <p>Berikut adalah rincian laporan keuangan Anda:</p>
+                <table class="finance-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Keterangan</th>
+                            <th>Pemasukan</th>
+                            <th>Pengeluaran</th>
+                            <th>Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01-01-2025</td>
+                            <td>Pendapatan Penjualan</td>
+                            <td>Rp 10.000.000</td>
+                            <td>-</td>
+                            <td>Rp 10.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>02-01-2025</td>
+                            <td>Pembelian Barang</td>
+                            <td>-</td>
+                            <td>Rp 3.000.000</td>
+                            <td>Rp 7.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>03-01-2025</td>
+                            <td>Biaya Operasional</td>
+                            <td>-</td>
+                            <td>Rp 1.500.000</td>
+                            <td>Rp 5.500.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="btn-container">
+                <a href="dashboard.html" class="btn-back">Kembali ke Dashboard</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

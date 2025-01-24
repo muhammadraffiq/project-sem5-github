@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('background1.jpg') no-repeat center center fixed; /* Ganti 'background.jpg' dengan path gambar Anda */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f7fb;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+        }
+
+        .form-container {
+            flex: 1;
+            padding: 30px;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-container h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-container p {
+            margin-bottom: 30px;
+            font-size: 16px;
+            color: #777;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .form-container input:focus,
+        .form-container select:focus {
+            border-color: #007aff;
+        }
+
+        .form-container button {
+            background-color: #007aff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .form-container button:hover {
+            background-color: #005ecc;
+        }
+
+        .small-text {
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Gambar -->
+        <div class="image-container">
+            <img src="uploads/signup.jpeg" alt="Signup Illustration"> <!-- Ganti 'signup.jpeg' dengan path gambar Anda -->
+        </div>
+
+        <!-- Form -->
+        <div class="form-container">
+            <h2>Create an account</h2>
+            <p>Cek Barangmu Dengan Lebih Mudah dan Cepat!</p>
+            <form action="login_form.html" method="POST">
+                <input type="text" name="fullname" placeholder="Full Name*" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="No Hp" required>
+                <button type="submit">Daftar</button>
+            </form>
+            <p class="small-text">
+                Dengan membuat akun, kamu menyetujui Kebijakan Privasi dan Syarat & Ketentuan.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
